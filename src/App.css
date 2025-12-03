@@ -6,7 +6,10 @@
 }
 
 .card {
-  margin: 2em;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(110, 110, 110);
 }
 
 .read-the-docs {
@@ -15,10 +18,8 @@
 
 .MyButton {
   background-color: #277085;
-  border: none;
+  margin: 0.5em;
   padding: 1em 2em;
   font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
 }

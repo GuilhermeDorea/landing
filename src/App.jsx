@@ -1,24 +1,40 @@
-import { useState } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
+import { Curriculo } from './Curriculo';
 
-function MyButton() {
-  const [count, setCount] = useState(0);
+function GoToButton({ label, link }) {
+  const navigate = useNavigate(); // Hook para navegação via código
   function handleClick() {
-    setCount(count + 1);
+    navigate(link);
   }
   return (
     <button className="MyButton" onClick={handleClick}>
-      I'm a button that was clicked {count} times.
+      {label} {link ? '' : '(sem link)'}
     </button>
   );
 }
 
 function App() {
   return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/cv" element={<Curriculo />} />
+    </Routes>
+  );
+}
+
+function Home() {
+  return (
     <>
-      <h1>Teste</h1>
       <div className="card">
-        <MyButton className="MyButton" />
+        <h1>Guilherme Dórea Almeida</h1>
+        <h2>Graduando em Engenharia da Computação</h2>
+        <div>
+          <GoToButton label="Curriculo" link="/cv" />
+        </div>
+        <div>
+          <GoToButton label="Matricunator" link="https://matricunator.app/" />
+        </div>
       </div>
     </>
   );
