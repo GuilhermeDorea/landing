@@ -144,7 +144,7 @@ export function AboutMe() {
         </div>
         <p>
           Those photos are with Mariana, we've been toghether for {DatingYearsMari} years! We love being toghether an
-          she's my main motivation to move on, and be a better person
+          she's my main motivation to move on, and be a better person.
         </p>
       </AnimatedSection>
     </div>
