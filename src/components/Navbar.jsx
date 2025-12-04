@@ -16,16 +16,15 @@ export function Navbar() {
           <HouseIcon size={20} />
           Home
         </NavLink>
+        <NavLink to="/aboutme" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
+          <UserIcon size={20} weight="fill" />
+          About me
+        </NavLink>
 
         <a href={resume} download={true} className="nav-item">
           <DownloadSimpleIcon size={20} />
           Resume pt-BR
         </a>
-
-        <NavLink to="/contact" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
-          <UserIcon size={20} weight="fill" />
-          About me
-        </NavLink>
       </div>
       <div className="navbar-social">
         <a href="https://github.com/GuilhermeDorea" target="_blank" rel="noreferrer">

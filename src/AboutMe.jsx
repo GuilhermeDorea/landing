@@ -1,8 +1,8 @@
-export function Curriculo() {
+export function AboutMe() {
   return (
-    <div>
+    <div className="card">
       <h1>Sobre Mim</h1>
-      <p>Esta é a página sobre o Guilherme.</p>
+      <p>Esta página está em construção</p>
     </div>
   );
 }

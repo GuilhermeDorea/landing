@@ -1,11 +1,11 @@
 import { EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
 import { Link, Route, Routes } from 'react-router-dom';
+import { AboutMe } from './AboutMe';
 import './App.css';
 import fotoPerfil from './assets/guilhermedorea.png';
 import { ContactForm } from './components/ContactForm';
 import { Navbar } from './components/Navbar';
 import { StarBackground } from './components/StarBackground';
-import { Curriculo } from './Curriculo';
 import './index.css';
 
 function ProjectCard({ children, link, fotoPerfil }) {
@@ -24,7 +24,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cv" element={<Curriculo />} />
+        <Route path="/aboutme" element={<AboutMe />} />
       </Routes>
     </>
   );
