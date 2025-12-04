@@ -16,16 +16,15 @@ export function StarBackground() {
 
   const options = {
     background: {
-      color: {
-        value: '#0f172a' // Cor de fundo (Azul espacial escuro)
-      }
+      color: { value: '#080c18ff' }
     },
+
     fpsLimit: 120,
     interactivity: {
       events: {
         onHover: {
           enable: true,
-          mode: 'grab' // As estrelas se conectam ao mouse
+          mode: 'grab'
         },
         onClick: {
           enable: true,
@@ -73,7 +72,7 @@ export function StarBackground() {
         value: 0.5
       },
       shape: {
-        type: 'circle'
+        type: 'triangle'
       },
       size: {
         value: { min: 1, max: 3 }
@@ -87,14 +86,9 @@ export function StarBackground() {
       <Particles
         id="tsparticles"
         options={options}
-        // O estilo abaixo é CRUCIAL para ficar no fundo
         style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: -1
+          color: 'white',
+          filter: 'blur(60px)'
         }}
       />
     );

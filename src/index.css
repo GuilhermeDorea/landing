@@ -1,27 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Science+Gothic:wght@100..900&display=swap');
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Oswald', sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-  color-scheme: white dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+  letter-spacing: 0.5px;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #3a4ec4;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
+  text-shadow: 0 0 20px #ffffff;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  color: #ffffff;
+  color: #f8f8f8;
 }
 
 h1 {
@@ -39,12 +37,18 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  background-color: #28326e;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 12px 50px;
+  transition: box-shadow 0.3s ease-in-out;
+  text-shadow: 0 0 25px #ffffff;
 }
 
 .card {
   padding: 1em 2em;
-  border: 1px solid #e1e1e1;
+  border: 1px transparent #e1e1e1;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(5px);
   margin-top: 2rem;
 }

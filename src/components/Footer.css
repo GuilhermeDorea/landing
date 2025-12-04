@@ -1,0 +1,51 @@
+/* src/App.css */
+
+.footer {
+  /* Layout */
+  display: flex;
+  justify-content: space-between; /* Joga um grupo pra cada ponta */
+  align-items: center;
+  padding: 20px 40px;
+  margin-top: 80px; /* Garante espaço do último conteúdo */
+
+  /* Estilo Visual (Vidro Escuro ou Claro dependendo do gosto) */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* Texto */
+  color: #fff; /* Branco para contrastar com o fundo espacial */
+  font-size: 0.9rem;
+}
+
+/* Links Sociais no Footer */
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  color: rgba(255, 255, 255, 0.7); /* Branco meio transparente */
+  transition: all 0.2s;
+  display: flex; /* Para alinhar o ícone */
+}
+
+.footer-socials a:hover {
+  color: #61dafb; /* Azul destaque */
+  transform: translateY(-2px);
+}
+
+.footer-copy p {
+  margin: 0;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Responsividade para celular: Um embaixo do outro */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

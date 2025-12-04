@@ -1,0 +1,82 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  /* Layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+
+  /* Estilo Vidro */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  gap: 50px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+/* Estilo dos Links */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: all 0.2s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-item:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Classe automática que o NavLink adiciona quando estamos na página */
+.nav-item.active {
+  color: #61dafb; /* Azul React ou a cor de destaque do seu site */
+  background: rgba(97, 218, 251, 0.1);
+}
+
+.navbar-social {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-social a {
+  color: white;
+  transition: transform 0.2s;
+}
+
+.navbar-social a:hover {
+  color: #61dafb;
+  transform: translateY(-2px);
+}
+
+/* Ajuste para o conteúdo não ficar escondido atrás da navbar fixa */
+.home-container,
+.cv-container {
+  padding-top: 100px; /* 70px da navbar + 30px de respiro */
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}

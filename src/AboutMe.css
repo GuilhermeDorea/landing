@@ -1,0 +1,159 @@
+.about-me-container {
+  text-align: left;
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-me-card {
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  align-items: center;
+}
+.skill-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #eee;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Container das bolinhas */
+.level-container {
+  display: flex;
+  gap: 8px; /* Espaço entre as bolinhas */
+}
+
+/* A bolinha vazia (Base) */
+.level-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #e5e7eb; /* Cinza claro */
+  border-radius: 50%; /* Faz virar círculo */
+  transition: all 0.3s;
+}
+
+.level-dot.filled {
+  background-color: #25aceb; /* Azul destaque */
+  box-shadow: 0 0 5px rgb(54, 113, 238); /* Leve brilho */
+}
+
+.level-text {
+  font-size: 0.85rem;
+  color: #9e9e9e;
+  margin: 0;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 1em 2em;
+  border: 1px solid #e1e1e169;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+/* === EXPERCIENCIAS === */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* A Linha Vertical */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 26px;
+  width: 2px;
+  background-color: #25aceb;
+  box-shadow: 0 0 5px rgb(54, 113, 238);
+}
+
+/* O Item Individual */
+.timeline-item {
+  position: relative;
+  padding-left: 25px;
+}
+
+/* A Bolinha (Dot) */
+.timeline-dot {
+  position: absolute;
+  left: 0; /* Alinha com o container */
+  top: 5px; /* Ajuste vertical para alinhar com o título */
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  z-index: 1; /* Garante que fique acima da linha */
+  background-color: #25aceb; /* Azul destaque */
+  box-shadow: 0 0 5px rgb(54, 113, 238); /* Leve brilho */
+}
+
+/* Estilos de Texto */
+.timeline-date {
+  font-size: 0.85rem;
+  color: #d3d3d3;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.timeline-role {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #829abb;
+  margin: 0;
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  color: #2563eb;
+  font-weight: 500;
+  margin: 2px 0 8px 0;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* === LOVE CARD === */
+.loves-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  height: auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.love-pic {
+  border-radius: 10px 10px 10px 10px;
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
