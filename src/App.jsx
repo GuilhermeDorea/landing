@@ -1,22 +1,19 @@
-import { ArrowSquareOutIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import fotoPerfil from './assets/guilhermedorea.png';
 import { ContactForm } from './components/ContactForm';
+import { Navbar } from './components/Navbar';
 import { StarBackground } from './components/StarBackground';
 import { Curriculo } from './Curriculo';
 import './index.css';
 
-function GoToButton({ label, link, icon }) {
-  const navigate = useNavigate(); // Hook para navegação via código
-  function handleClick() {
-    navigate(link);
-  }
+function ProjectCard({ children, link, fotoPerfil }) {
   return (
-    <button className="MyButton" onClick={handleClick}>
-      {icon}
-      {label}
-    </button>
+    <Link to={link} className="card-link">
+      <img className="proj-pic" src={fotoPerfil} />
+      <div className="project-text">{children}</div>
+    </Link>
   );
 }
 
@@ -24,6 +21,7 @@ function App() {
   return (
     <>
       <StarBackground />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cv" element={<Curriculo />} />
@@ -36,46 +34,59 @@ function Home() {
   return (
     <>
       <div className="home-container">
-        <div className="card">
-          <img className="avatar" src={fotoPerfil} />
-          <h1>Guilherme Dórea Almeida</h1>
-          <h2>Graduando em Engenharia da Computação</h2>
-          <div>
-            <GoToButton label="Curriculo" link="/cv" />
+        <div className="card starter-card">
+          <div className="left-starter-decor">
+            <h2>Guilherme Dórea Almeida</h2>
+            <h4 className="starter-text">
+              Hello, I'm a brazilian undergratuated student at <a href="https://www.ufba.br/">Ufba</a>. I have 2 years
+              of experience in developmente, and have great interest in software engineering, web development and data
+              science.
+            </h4>
+            <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+              <a href="https://github.com/GuilhermeDorea" target="_blank" rel="noreferrer" className="social-link">
+                <GithubLogoIcon size={24} weight="bold" />
+                <span>GitHub</span>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/guilhermedorea/"
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+              >
+                <LinkedinLogoIcon size={24} weight="bold" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
-          <div style={{ marginTop: '20px' }}>
-            <a href="https://github.com/GuilhermeDorea" target="_blank" className="social-icon">
-              <GithubLogoIcon size={64} />
-            </a>
-            <a href="https://linkedin.com/in/guilhermedorea/" target="_blank" className="social-icon">
-              <LinkedinLogoIcon size={64} />
-            </a>
+          <div className="right-starter-decor">
+            <img className="avatar" src={fotoPerfil} />
           </div>
         </div>
 
-        <section className="content-section">
-          <h2>Projetos em Destaque</h2>
+        <div className="content-section">
+          <h2>Featured projects</h2>
           <div className="projects-grid">
-            {/* Cartão do Projeto 1 */}
-            <div className="project-card">
-              <h4>Matricunator</h4>
+            <ProjectCard link="https://matricunator.app/" fotoPerfil="src/assets/MatricunatorLogo.png">
+              <h3>Matricunator</h3>
               <p>
-                Ferramenta para definir grade curricular da UFBA, com opção de otimização automática baseada nas vagas e
-                matérias do usuário.
+                Tool to assist students in planning their academic trajectory, helping them choose the best courses to
+                take each semester based on their preferences and academic history.
               </p>
-              <GoToButton
-                label="Acessar site"
-                link="https://matricunator.app/"
-                external={true}
-                icon={<ArrowSquareOutIcon size={20} />}
-              />
-            </div>
+            </ProjectCard>
+            <ProjectCard link="https://matricunator.app/" fotoPerfil="src/assets/MatricunatorLogo.png">
+              <h3>Matricunator</h3>
+              <p>
+                Tool to assist students in planning their academic trajectory, helping them choose the best courses to
+                take each semester based on their preferences and academic history.
+              </p>
+            </ProjectCard>
           </div>
-        </section>
-        <section className="card">
-          <h2>Contate-me</h2>
+        </div>
+        <div className="card">
+          <h2>Contact me</h2>
           <ContactForm />
-        </section>
+        </div>
       </div>
     </>
   );

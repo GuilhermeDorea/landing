@@ -1,0 +1,39 @@
+import { DownloadSimpleIcon, GithubLogoIcon, HouseIcon, LinkedinLogoIcon, UserIcon } from '@phosphor-icons/react';
+import { NavLink } from 'react-router-dom';
+import fotoPerfil from '../assets/GD.svg';
+import './Nav.css';
+
+export function Navbar() {
+  return (
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <img className="logo" src={fotoPerfil} />
+      </div>
+
+      <div className="navbar-links">
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
+          <HouseIcon size={20} />
+          Home
+        </NavLink>
+
+        <NavLink to="/cv" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
+          <DownloadSimpleIcon size={20} />
+          Curriculum
+        </NavLink>
+
+        <NavLink to="/cv" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
+          <UserIcon size={20} weight="fill" />
+          About me
+        </NavLink>
+      </div>
+      <div className="navbar-social">
+        <a href="https://github.com/GuilhermeDorea" target="_blank" rel="noreferrer">
+          <GithubLogoIcon size={24} />
+        </a>
+        <a href="https://linkedin.com/in/guilhermedorea/" target="_blank" rel="noreferrer">
+          <LinkedinLogoIcon size={24} />
+        </a>
+      </div>
+    </nav>
+  );
+}

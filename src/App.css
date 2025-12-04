@@ -5,57 +5,103 @@
   text-align: center;
 }
 
-.MyButton {
-  background-color: #28326e;
-  font-size: 1rem;
-  border-radius: 10px;
-  width: 100%;
-}
-.MyButton:hover {
-  background-color: #28326e;
-}
-.avatar {
-  border-radius: 50%;
-  width: 150px;
-  border: 5px solid #1b65b9;
-}
-
-/* src/ContactForm.jsx */
-
 .home-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.projects-grid {
+.starter-card {
+  text-align: left;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo automático */
+  grid-template-columns: 1fr 1fr;
+}
+
+.starter-card-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
   gap: 20px;
 }
 
-.project-card {
-  background: #f4f4f5;
+.avatar {
+  text-align: center;
+  border-radius: 10%;
+  width: 350px;
+}
+.proj-pic {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
 
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #e1e1e1;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card-link {
+  padding: 0em 0em;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  margin-top: 2rem;
+  text-align: left;
+  color: inherit;
+  border: 1px solid #e1e1e169;
   transition: transform 0.2s;
+  max-width: 100%;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
+.card-link:hover {
+  color: inherit;
+  text-shadow: none;
   border-color: #2563eb;
+  transform: translateY(-5px);
 }
 
-.project-card {
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px); /* Desfoque atrás do vidro */
+.project-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: -10px 20px 20px 20px;
 }
-.card {
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px); /* Desfoque atrás do vidro */
+
+.right-starter-decor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-starter-decor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.social-link {
+  /* O Segredo: Flexbox */
+  display: inline-flex; /* Comporta-se como texto por fora, mas flexível por dentro */
+  align-items: center; /* Centraliza verticalmente (ícone e texto na mesma altura) */
+  gap: 10px; /* Espaço entre o ícone e o texto */
+
+  /* Estética do botão */
+  text-decoration: none; /* Remove o sublinhado */
+  color: #fff; /* Cor do texto/ícone */
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px transparent;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  color: #2563eb;
+  text-shadow: 0 4px 12px rgba(37, 99, 235, 0.65);
 }
