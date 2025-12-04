@@ -90,9 +90,8 @@
   align-items: center; /* Centraliza verticalmente (ícone e texto na mesma altura) */
   gap: 10px; /* Espaço entre o ícone e o texto */
 
-  /* Estética do botão */
-  text-decoration: none; /* Remove o sublinhado */
-  color: #fff; /* Cor do texto/ícone */
+  text-decoration: none;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
   border: 1px transparent;
