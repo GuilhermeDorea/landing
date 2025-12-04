@@ -18,7 +18,6 @@ export function StarBackground() {
     background: {
       color: { value: '#080c18ff' }
     },
-    backdrop: { filter: 'blur(60px)' },
 
     fpsLimit: 120,
     interactivity: {

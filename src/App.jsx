@@ -1,4 +1,4 @@
-import { GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import { EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
 import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import fotoPerfil from './assets/guilhermedorea.png';
@@ -31,31 +31,36 @@ function App() {
 }
 
 function Home() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <>
       <div className="home-container">
         <div className="card starter-card">
           <div className="left-starter-decor">
-            <h2>Guilherme Dórea Almeida</h2>
+            <h2>Hi, I'm Guilherme Dórea Almeida ✈️</h2>
             <h4 className="starter-text">
-              Hello, I'm a brazilian undergratuated student at <a href="https://www.ufba.br/">Ufba</a>. I have 2 years
-              of experience in developmente, and have great interest in software engineering, web development and data
-              science.
+              I'm a brazilian undergratuated software engineer student at UFBA (Federal University of Bahia). I have 2
+              years of experience in software development, and have great interest in software engineering, aeronautic
+              engineering, data science and fullstack web development.
             </h4>
             <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-              <a href="https://github.com/GuilhermeDorea" target="_blank" rel="noreferrer" className="social-link">
+              <a href="https://github.com/GuilhermeDorea" target="_blank" className="social-link">
                 <GithubLogoIcon size={24} weight="bold" />
                 <span>GitHub</span>
               </a>
 
-              <a
-                href="https://linkedin.com/in/guilhermedorea/"
-                target="_blank"
-                rel="noreferrer"
-                className="social-link"
-              >
+              <a href="https://linkedin.com/in/guilhermedorea/" target="_blank" className="social-link">
                 <LinkedinLogoIcon size={24} weight="bold" />
                 <span>LinkedIn</span>
+              </a>
+              <a style={{ cursor: 'pointer' }} onClick={scrollToContact} target="_blank" className="social-link">
+                <EnvelopeIcon size={24} weight="bold" />
+                <span>Mail me</span>
               </a>
             </div>
           </div>
@@ -83,7 +88,7 @@ function Home() {
             </ProjectCard>
           </div>
         </div>
-        <div className="card">
+        <div className="card" id="contact">
           <h2>Contact me</h2>
           <ContactForm />
         </div>
