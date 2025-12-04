@@ -2,7 +2,9 @@ import { EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/
 import { Link, Route, Routes } from 'react-router-dom';
 import { AboutMe } from './AboutMe';
 import './App.css';
+import guidoNewsImg from './assets/GD.svg';
 import fotoPerfil from './assets/guilhermedorea.png';
+import matricunatorImg from './assets/MatricunatorLogo.png';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
@@ -74,14 +76,14 @@ function Home() {
         <div className="card content-section">
           <h2>Featured projects</h2>
           <div className="projects-grid">
-            <ProjectCard link="https://matricunator.app/" projectPicture="src/assets/MatricunatorLogo.png">
+            <ProjectCard link="https://matricunator.app/" projectPicture={matricunatorImg}>
               <h3>Matricunator</h3>
               <p>
                 Tool to assist students in planning their academic trajectory, helping them choose the best courses to
                 take each semester based on their preferences and academic history.
               </p>
             </ProjectCard>
-            <ProjectCard link="" projectPicture="src/assets/GD.svg">
+            <ProjectCard link="" projectPicture={guidoNewsImg}>
               <h3>GuidoNews (⚠️ In development)</h3>
               <p>Blog with posts made by the author, discussing latest tech news and relevant topics.</p>
             </ProjectCard>
