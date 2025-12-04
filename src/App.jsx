@@ -4,6 +4,7 @@ import { AboutMe } from './AboutMe';
 import './App.css';
 import fotoPerfil from './assets/guilhermedorea.png';
 import { ContactForm } from './components/ContactForm';
+import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { StarBackground } from './components/StarBackground';
 import './index.css';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/aboutme" element={<AboutMe />} />
       </Routes>
+      <Footer />
     </>
   );
 }

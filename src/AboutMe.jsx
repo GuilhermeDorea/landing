@@ -1,4 +1,4 @@
-import { AtomIcon, CodeIcon, DatabaseIcon, FileJsIcon, FilePyIcon } from '@phosphor-icons/react';
+import { AtomIcon, CodeIcon, DatabaseIcon, FileJsIcon, FilePyIcon, HeadCircuitIcon } from '@phosphor-icons/react';
 import './AboutMe.css';
 import { AnimatedSection } from './components/AnimatedSlide';
 
@@ -89,13 +89,14 @@ export function AboutMe() {
       </AnimatedSection>
       {/* === Minhas habilidades === */}
       <AnimatedSection className="card about-me-container">
-        <h1>Main skills</h1>
-        <div className="card skill-cards-container">
-          <SkillCard skill="Js/Ts" level="Intermediate" icon={<FileJsIcon size={32} weight="bold" />} />
-          <SkillCard skill="React.js" level="Advanced" icon={<AtomIcon size={32} weight="bold" />} />
-          <SkillCard skill="Python" level="Advanced" icon={<FilePyIcon size={32} weight="bold" />} />
-          <SkillCard skill="Django" level="Intermediate" icon={<DatabaseIcon size={32} weight="bold" />} />
+        <h2>Main skills</h2>
+        <div className="skill-cards-container">
           <SkillCard skill="Algorithms" level="Expert" icon={<CodeIcon size={32} weight="bold" />} />
+          <SkillCard skill="AI devOps" level="Expert" icon={<HeadCircuitIcon size={32} weight="bold" />} />
+          <SkillCard skill="Python" level="Expert" icon={<FilePyIcon size={32} weight="bold" />} />
+          <SkillCard skill="Django" level="Advanced" icon={<DatabaseIcon size={32} weight="bold" />} />
+          <SkillCard skill="React.js" level="Advanced" icon={<AtomIcon size={32} weight="bold" />} />
+          <SkillCard skill="Js/Ts" level="Intermediate" icon={<FileJsIcon size={32} weight="bold" />} />
         </div>
       </AnimatedSection>
       {/* === Card de experiencia === */}
