@@ -5,20 +5,57 @@
   text-align: center;
 }
 
-.card {
-  margin: 2em;
-}
-
-.read-the-docs {
-  color: #70d2ff;
-}
-
 .MyButton {
-  background-color: #277085;
-  border: none;
-  padding: 1em 2em;
+  background-color: #28326e;
   font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  width: 100%;
+}
+.MyButton:hover {
+  background-color: #28326e;
+}
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  border: 5px solid #1b65b9;
+}
+
+/* src/ContactForm.jsx */
+
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo automático */
+  gap: 20px;
+}
+
+.project-card {
+  background: #f4f4f5;
+
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e1e1e1;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #2563eb;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px); /* Desfoque atrás do vidro */
+}
+.card {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px); /* Desfoque atrás do vidro */
 }
