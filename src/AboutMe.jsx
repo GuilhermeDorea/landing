@@ -1,7 +1,17 @@
-import { AtomIcon, CodeIcon, DatabaseIcon, FileJsIcon, FilePyIcon, HeadCircuitIcon } from '@phosphor-icons/react';
+import {
+  AtomIcon,
+  CodeIcon,
+  DatabaseIcon,
+  FileJsIcon,
+  FilePyIcon,
+  HeadCircuitIcon,
+  HeartIcon
+} from '@phosphor-icons/react';
 import './AboutMe.css';
+import Photo1Mari from './assets/Foto1Mari.png';
+import Photo2Mari from './assets/Foto2Mari.png';
 import { AnimatedSection } from './components/AnimatedSlide';
-
+const DatingYearsMari = new Date().getFullYear() - 2018;
 const experiences = [
   {
     date: '2025',
@@ -83,8 +93,15 @@ export function AboutMe() {
         </p>
         <p>
           Some of my main projects are a personal blog <a href="https://guidonews.guilhermedorea.com">GuidoNews </a>
-          where I share news about engineering and technology and a application that helps UFBA students to build their
+          where I share news about engineering and technology that are relevant. And the{' '}
+          <a href="https://matricunator.app/">Matricunator</a>, an application that helps UFBA students to build their
           schedules more easily, with a greedy algorithim that optimizes the use of free time between classes.
+        </p>
+        <p>
+          When I'm not coding, I love to spend my time with the ones I love, my family, my friends and my only and
+          eternal love, Mariana. I enjoy helping others by education and sharing my knowledge through tutoring and
+          mentoring. I also love traveling and exploring new places, which broadens my perspective and inspires my
+          creativity.
         </p>
       </AnimatedSection>
       {/* === Minhas habilidades === */}
@@ -114,6 +131,21 @@ export function AboutMe() {
             </AnimatedSection>
           ))}
         </div>
+      </AnimatedSection>
+      {/* === Loves === */}
+      <AnimatedSection className="about-me-card" yOffset={0}>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <HeartIcon size={32} weight="bold" />
+          My love
+        </h2>
+        <div className="loves-card">
+          <img className="love-pic" src={Photo1Mari} />
+          <img className="love-pic" src={Photo2Mari} />
+        </div>
+        <p>
+          Those photos are with Mariana, we've been toghether for {DatingYearsMari} years! We love being toghether an
+          she's my main motivation to move on, and be a better person
+        </p>
       </AnimatedSection>
     </div>
   );

@@ -6,7 +6,7 @@ export function AnimatedSection({ children, className, yOffset = 100, duration =
       className={className}
       initial={{ opacity: 0, y: yOffset }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, margin: '-100px' }}
+      viewport={{ once: false, margin: '0px' }}
       transition={{ duration: duration, ease: 'easeOut' }}
     >
       {children}

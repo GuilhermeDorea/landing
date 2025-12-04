@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-copy">
-        <p>Guilherme Dórea &copy; {currentYear}</p>
+        <p>Guilherme Dórea Almeida &copy; {currentYear}</p>
       </div>
       <div className="footer-socials">
         <a href="https://github.com/GuilhermeDorea" target="_blank" rel="noreferrer" aria-label="GitHub">
