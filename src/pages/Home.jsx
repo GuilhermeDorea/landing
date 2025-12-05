@@ -1,0 +1,81 @@
+import { EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import { Link } from 'react-router-dom';
+import guidoNewsImg from '../assets/imgs/GD.svg';
+import fotoPerfil from '../assets/imgs/guilhermedorea.png';
+import matricunatorImg from '../assets/imgs/MatricunatorLogo.png';
+import { ContactForm } from '../components/ContactForm';
+import '../styles/App.css';
+import '../styles/index.css';
+
+function ProjectCard({ children, link, projectPicture }) {
+  return (
+    <Link to={link} className="card-link">
+      <img className="proj-pic" src={projectPicture} />
+      <div className="project-text">{children}</div>
+    </Link>
+  );
+}
+
+export function Home() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  return (
+    <>
+      <div className="home-container">
+        <div className="card starter-card">
+          <div className="left-starter-decor">
+            <h2>Hi, I'm Guilherme Dórea Almeida ✈️</h2>
+            <h4 className="starter-text">
+              I'm a brazilian undergratuated software engineer student at UFBA (Federal University of Bahia). I have 2
+              years of experience in software development, and have great interest in software engineering, aeronautic
+              engineering, data science and fullstack web development.
+            </h4>
+            <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+              <a href="https://github.com/GuilhermeDorea" target="_blank" className="social-link">
+                <GithubLogoIcon size={24} weight="bold" />
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://linkedin.com/in/guilhermedorea/" target="_blank" className="social-link">
+                <LinkedinLogoIcon size={24} weight="bold" />
+                <span>LinkedIn</span>
+              </a>
+              <a style={{ cursor: 'pointer' }} onClick={scrollToContact} target="_blank" className="social-link">
+                <EnvelopeIcon size={24} weight="bold" />
+                <span>Mail me</span>
+              </a>
+            </div>
+          </div>
+          <div className="right-starter-decor">
+            <img className="avatar" src={fotoPerfil} />
+          </div>
+        </div>
+
+        <div className="card content-section">
+          <h2>Featured projects</h2>
+          <div className="projects-grid">
+            <ProjectCard link="https://matricunator.app/" projectPicture={matricunatorImg}>
+              <h3>Matricunator</h3>
+              <p>
+                Tool to assist students in planning their academic trajectory, helping them choose the best courses to
+                take each semester based on their preferences and academic history.
+              </p>
+            </ProjectCard>
+            <ProjectCard link="" projectPicture={guidoNewsImg}>
+              <h3>GuidoNews (⚠️ In development)</h3>
+              <p>Blog with posts made by the author, discussing latest tech news and relevant topics.</p>
+            </ProjectCard>
+          </div>
+        </div>
+        <div className="card" id="contact">
+          <h2>Contact me</h2>
+          <ContactForm />
+        </div>
+      </div>
+    </>
+  );
+}

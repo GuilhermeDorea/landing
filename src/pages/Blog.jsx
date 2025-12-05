@@ -1,9 +1,9 @@
 // src/pages/BlogHome.jsx
 import ReactMarkdown from 'react-markdown';
 import { Link, useParams } from 'react-router-dom';
-import './App.css'; // Seus estilos
-import './Blog.css'; // Seus estilos
-import { blogPosts } from './posts'; // Importa sua lista
+import { blogPosts } from '../data';
+import '../styles/App.css';
+import '../styles/Blog.css';
 
 export function BlogHome() {
   return (

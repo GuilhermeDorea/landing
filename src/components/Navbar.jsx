@@ -7,9 +7,9 @@ import {
   UserIcon
 } from '@phosphor-icons/react';
 import { NavLink } from 'react-router-dom';
-import fotoPerfil from '../assets/GD.svg';
-import resume from '../assets/Resume_GuilhermeDoreaAlmeida.pdf';
-import './Nav.css';
+import fotoPerfil from '../assets/imgs/GD.svg';
+import resume from '../assets/pdfs/Resume_GuilhermeDoreaAlmeida.pdf';
+import '../styles/Nav.css';
 
 export function Navbar() {
   return (

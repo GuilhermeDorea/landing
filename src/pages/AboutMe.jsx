@@ -7,10 +7,10 @@ import {
   HeadCircuitIcon,
   HeartIcon
 } from '@phosphor-icons/react';
-import './AboutMe.css';
-import Photo1Mari from './assets/Foto1Mari.png';
-import Photo2Mari from './assets/Foto2Mari.png';
-import { AnimatedSection } from './components/AnimatedSlide';
+import Photo1Mari from '../assets/imgs/Foto1Mari.png';
+import Photo2Mari from '../assets/imgs/Foto2Mari.png';
+import { AnimatedSection } from '../components/AnimatedSlide';
+import '../styles/AboutMe.css';
 const DatingYearsMari = new Date().getFullYear() - 2018;
 const experiences = [
   {
