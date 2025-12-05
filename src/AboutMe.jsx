@@ -133,7 +133,7 @@ export function AboutMe() {
         </div>
       </AnimatedSection>
       {/* === Loves === */}
-      <AnimatedSection className="about-me-card" yOffset={0}>
+      <AnimatedSection className="about-me-card" yOffset={100}>
         <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <HeartIcon size={32} weight="bold" />
           My love
