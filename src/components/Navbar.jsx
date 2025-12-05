@@ -1,4 +1,11 @@
-import { DownloadSimpleIcon, GithubLogoIcon, HouseIcon, LinkedinLogoIcon, UserIcon } from '@phosphor-icons/react';
+import {
+  ArticleIcon,
+  DownloadSimpleIcon,
+  GithubLogoIcon,
+  HouseIcon,
+  LinkedinLogoIcon,
+  UserIcon
+} from '@phosphor-icons/react';
 import { NavLink } from 'react-router-dom';
 import fotoPerfil from '../assets/GD.svg';
 import resume from '../assets/Resume_GuilhermeDoreaAlmeida.pdf';
@@ -13,12 +20,16 @@ export function Navbar() {
 
       <div className="navbar-links">
         <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
-          <HouseIcon size={20} />
+          <HouseIcon size={20} weight="fill" />
           Home
         </NavLink>
         <NavLink to="/aboutme" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
           <UserIcon size={20} weight="fill" />
           About me
+        </NavLink>
+        <NavLink to="/posts" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
+          <ArticleIcon size={20} weight="fill" />
+          Posts
         </NavLink>
 
         <a href={resume} download={true} className="nav-item">

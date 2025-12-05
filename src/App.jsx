@@ -5,6 +5,7 @@ import './App.css';
 import guidoNewsImg from './assets/GD.svg';
 import fotoPerfil from './assets/guilhermedorea.png';
 import matricunatorImg from './assets/MatricunatorLogo.png';
+import { BlogHome, BlogPost } from './Blog';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
@@ -28,6 +29,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutme" element={<AboutMe />} />
+        <Route path="/posts" element={<BlogHome />} />
+        <Route path="/posts/:slug" element={<BlogPost />} />
       </Routes>
       <Footer />
     </>
