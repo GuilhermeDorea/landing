@@ -19,16 +19,12 @@ export function StarBackground() {
       color: { value: '#080c18ff' }
     },
 
-    fpsLimit: 120,
+    fpsLimit: 100,
     interactivity: {
       events: {
         onHover: {
-          enable: true,
+          enable: false,
           mode: 'grab'
-        },
-        onClick: {
-          enable: true,
-          mode: 'push' // Clicar cria mais estrelas
         }
       },
       modes: {
@@ -58,7 +54,7 @@ export function StarBackground() {
           default: 'bounce'
         },
         random: false,
-        speed: 1, // Velocidade do movimento natural
+        speed: 0.1, // Velocidade do movimento natural
         straight: false
       },
       number: {
@@ -72,7 +68,7 @@ export function StarBackground() {
         value: 0.5
       },
       shape: {
-        type: 'triangle'
+        type: 'circle'
       },
       size: {
         value: { min: 1, max: 3 }
@@ -82,16 +78,7 @@ export function StarBackground() {
   };
 
   if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        options={options}
-        style={{
-          color: 'white',
-          filter: 'blur(60px)'
-        }}
-      />
-    );
+    return <Particles id="tsparticles" options={options} className="background-effects" />;
   }
 
   return <></>;

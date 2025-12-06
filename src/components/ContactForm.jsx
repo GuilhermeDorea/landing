@@ -1,5 +1,5 @@
 import { useForm, ValidationError } from '@formspree/react';
-import '../styles/Cntc.css';
+import '../styles/ContactForm.css';
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm('xvgeqpgv');

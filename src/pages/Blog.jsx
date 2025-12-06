@@ -9,7 +9,7 @@ export function BlogHome() {
   return (
     <div className="blog-home">
       <h1>Posts</h1>
-      <div className="post-grid">
+      <div>
         {blogPosts.map((post) => (
           <Link key={post.id} className="project-card" to={`/posts/${post.slug}`}>
             <div className="link-post">{post.title}</div>

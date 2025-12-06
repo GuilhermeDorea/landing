@@ -1,6 +1,7 @@
 import {
   ArticleIcon,
   DownloadSimpleIcon,
+  FoldersIcon,
   GithubLogoIcon,
   HouseIcon,
   LinkedinLogoIcon,
@@ -31,18 +32,13 @@ export function Navbar() {
           <ArticleIcon size={20} weight="fill" />
           Posts
         </NavLink>
-
+        <NavLink to="/projects" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
+          <FoldersIcon size={20} weight="fill" />
+          Projects
+        </NavLink>
         <a href={resume} download={true} className="nav-item">
           <DownloadSimpleIcon size={20} />
           Resume pt-BR
-        </a>
-      </div>
-      <div className="navbar-social">
-        <a href="https://github.com/GuilhermeDorea" target="_blank" rel="noreferrer">
-          <GithubLogoIcon size={24} />
-        </a>
-        <a href="https://linkedin.com/in/guilhermedorea/" target="_blank" rel="noreferrer">
-          <LinkedinLogoIcon size={24} />
         </a>
       </div>
     </nav>

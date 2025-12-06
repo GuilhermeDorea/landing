@@ -7,6 +7,7 @@ import {
   HeadCircuitIcon,
   HeartIcon
 } from '@phosphor-icons/react';
+import { Link } from 'react-router-dom';
 import Photo1Mari from '../assets/imgs/Foto1Mari.png';
 import Photo2Mari from '../assets/imgs/Foto2Mari.png';
 import { AnimatedSection } from '../components/AnimatedSlide';
@@ -92,7 +93,7 @@ export function AboutMe() {
           projects.
         </p>
         <p>
-          Some of my main projects are a personal blog <a href="https://guidonews.guilhermedorea.com">GuidoNews </a>
+          Some of my main projects are a personal blog <Link to="/posts">GuidoNews </Link>
           where I share news about engineering and technology that are relevant. And the{' '}
           <a href="https://matricunator.app/">Matricunator</a>, an application that helps UFBA students to build their
           schedules more easily, with a greedy algorithim that optimizes the use of free time between classes.

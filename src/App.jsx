@@ -5,6 +5,7 @@ import { StarBackground } from './components/StarBackground';
 import { AboutMe } from './pages/AboutMe';
 import { BlogHome, BlogPost } from './pages/Blog';
 import { Home } from './pages/Home';
+import { Project, ProjectsHome } from './pages/Projects';
 import './styles/App.css';
 import './styles/index.css';
 
@@ -18,6 +19,8 @@ function App() {
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/posts" element={<BlogHome />} />
         <Route path="/posts/:slug" element={<BlogPost />} />
+        <Route path="/projects" element={<ProjectsHome />} />
+        <Route path="/projects/:slug" element={<Project />} />
       </Routes>
       <Footer />
     </>

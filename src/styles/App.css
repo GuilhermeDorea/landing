@@ -33,19 +33,6 @@
   border-radius: 10%;
   width: 350px;
 }
-.proj-pic {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
-  height: 250px;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
 
 .card-link {
   padding: 0em 0em;
@@ -56,7 +43,7 @@
   color: inherit;
   border: 1px solid #e1e1e169;
   transition: transform 0.2s;
-  max-width: 100%;
+  max-width: 50%;
 }
 
 .card-link:hover {
@@ -64,13 +51,6 @@
   text-shadow: none;
   border-color: #2563eb;
   transform: translateY(-5px);
-}
-
-.project-text {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin: -10px 20px 20px 20px;
 }
 
 .right-starter-decor {
@@ -104,4 +84,69 @@
   transform: translateY(-3px);
   color: #2563eb;
   text-shadow: 0 4px 12px rgba(37, 99, 235, 0.65);
+}
+
+.myname {
+  display: inline-flex;
+  color: #80ffd9;
+}
+.myname::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #506e8ac9;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+}
+.myname:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+.myname:hover {
+  transform: translateY(-3px);
+  color: #80ffd9;
+  transition: all 0.2s ease;
+}
+
+.aviao {
+  display: inline-flex;
+  transition: all 0.2s ease;
+}
+
+.aviao::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #506e8ac9;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+}
+.aviao:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+.aviao:hover {
+  transform: translateY(-5px) translateX(5px);
 }

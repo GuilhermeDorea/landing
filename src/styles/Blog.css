@@ -1,16 +1,17 @@
 .blog-home {
   background: rgba(33, 37, 44, 0.9);
   backdrop-filter: blur(5px);
-  text-align: left;
   padding: 1em 2em;
   margin: auto;
   margin-top: 5em;
   width: 600px;
   border-radius: 10px;
+  text-align: left;
 }
 
 .project-card {
-  color: white;
+  color: inherit;
+  text-align: left;
 }
 .project-card:hover {
   border-color: rgb(255, 255, 255);
@@ -26,9 +27,11 @@
   margin-top: 2px;
   font-size: 0.8em;
   color: grey;
+  text-align: left;
 }
 .post-description {
   margin-top: -5px;
+  text-align: left;
 }
 .tag-grid {
   display: flex;
@@ -41,7 +44,12 @@
   font-size: 0.8em;
   margin-right: 10px;
   border-radius: 3px;
-  background-color: rgb(103, 118, 122);
+  background-color: rgb(117, 117, 117);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: rgb(243, 255, 252);
   padding: 2px 5px;
+}
+
+.link-post {
+  text-align: left;
 }

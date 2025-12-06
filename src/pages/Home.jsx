@@ -1,16 +1,17 @@
 import { EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
-import guidoNewsImg from '../assets/imgs/GD.svg';
+import GuidoNews from '../assets/imgs/guidonews.png';
 import fotoPerfil from '../assets/imgs/guilhermedorea.png';
-import matricunatorImg from '../assets/imgs/MatricunatorLogo.png';
+import matricunatorImagem from '../assets/imgs/MatricunatorLogo.png';
 import { ContactForm } from '../components/ContactForm';
 import '../styles/App.css';
 import '../styles/index.css';
+import '../styles/Projects.css';
 
-function ProjectCard({ children, link, projectPicture }) {
+function ProjectCard({ children, link, projectPicture, newtag = '_blank' }) {
   return (
-    <Link to={link} className="card-link">
-      <img className="proj-pic" src={projectPicture} />
+    <Link target={newtag} to={link} className="project-card">
+      <img className="project-pic" src={projectPicture} />
       <div className="project-text">{children}</div>
     </Link>
   );
@@ -28,7 +29,20 @@ export function Home() {
       <div className="home-container">
         <div className="card starter-card">
           <div className="left-starter-decor">
-            <h2>Hi, I'm Guilherme Dórea Almeida ✈️</h2>
+            <h2>
+              Hi, I'm{' '}
+              <a target="_blank" className="myname" href="/aboutme" data-tooltip="About me">
+                Guilherme Dórea Almeida{' '}
+              </a>{' '}
+              <a
+                target="_blank"
+                className="aviao"
+                href="https://www.instagram.com/axeflyaerodesign/"
+                data-tooltip="Axé Fly team Instagram"
+              >
+                ✈️{' '}
+              </a>
+            </h2>
             <h4 className="starter-text">
               I'm a brazilian undergratuated software engineer student at UFBA (Federal University of Bahia). I have 2
               years of experience in software development, and have great interest in software engineering, aeronautic
@@ -55,19 +69,19 @@ export function Home() {
           </div>
         </div>
 
-        <div className="card content-section">
-          <h2>Featured projects</h2>
+        <div className="projects-home">
+          <h1>Projects</h1>
           <div className="projects-grid">
-            <ProjectCard link="https://matricunator.app/" projectPicture={matricunatorImg}>
+            <ProjectCard link="https://matricunator.app/" projectPicture={matricunatorImagem}>
               <h3>Matricunator</h3>
               <p>
                 Tool to assist students in planning their academic trajectory, helping them choose the best courses to
                 take each semester based on their preferences and academic history.
               </p>
             </ProjectCard>
-            <ProjectCard link="" projectPicture={guidoNewsImg}>
-              <h3>GuidoNews (⚠️ In development)</h3>
-              <p>Blog with posts made by the author, discussing latest tech news and relevant topics.</p>
+            <ProjectCard link="/posts" projectPicture={GuidoNews} newtag={false}>
+              <h3>GuidoNews</h3>
+              <p> A blog with news about technology and my personal projects</p>
             </ProjectCard>
           </div>
         </div>

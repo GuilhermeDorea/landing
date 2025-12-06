@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export function AnimatedSection({ children, className, yOffset = 100, duration = 0.5 }) {
+export function AnimatedSection({ children, className, yOffset = 100, duration = 0.2 }) {
   return (
     <motion.div
       className={className}
