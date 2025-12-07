@@ -1,6 +1,5 @@
-import { ArticleIcon, DownloadSimpleIcon, FoldersIcon, HouseIcon, Moon, Sun, UserIcon } from '@phosphor-icons/react';
+import { ArticleIcon, FoldersIcon, HouseIcon, MoonIcon, SunIcon, UserIcon } from '@phosphor-icons/react';
 import { NavLink } from 'react-router-dom';
-import resume from '../assets/pdfs/Resume_GuilhermeDoreaAlmeida.pdf';
 import { useTheme } from '../hooks/useTheme'; // Importe o hook
 import '../styles/Nav.css';
 
@@ -13,7 +12,7 @@ export function Navbar() {
         className="theme-toggle-button"
         aria-label={`Alternar para modo ${theme === 'dark' ? 'claro' : 'escuro'}`}
       >
-        {theme === 'dark' ? <Sun size={24} weight="fill" /> : <Moon size={24} weight="fill" />}
+        {theme === 'dark' ? <SunIcon size={24} weight="fill" /> : <MoonIcon size={24} weight="fill" />}
       </button>
 
       <div className="navbar-links">
@@ -33,10 +32,6 @@ export function Navbar() {
           <FoldersIcon size={20} weight="fill" />
           Projects
         </NavLink>
-        <a href={resume} download={true} className="nav-item">
-          <DownloadSimpleIcon size={20} />
-          Resume pt-BR
-        </a>
       </div>
     </nav>
   );

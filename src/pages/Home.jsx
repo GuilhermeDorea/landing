@@ -1,11 +1,12 @@
-import { EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import { DownloadIcon, EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 import GuidoNews from '../assets/imgs/guidonews.png';
 import fotoPerfil from '../assets/imgs/guilhermedorea.png';
 import matricunatorImagem from '../assets/imgs/MatricunatorLogo.png';
+import resume from '../assets/pdfs/Resume_GuilhermeDoreaAlmeida.pdf';
 import { ContactForm } from '../components/ContactForm';
 import { ProjectCard } from '../pages/Projects';
-import '../styles/App.css';
+import '../styles/Home.css';
 import '../styles/index.css';
 import '../styles/Projects.css';
 
@@ -35,11 +36,11 @@ export function Home() {
                 ✈️{' '}
               </a>
             </h2>
-            <h4 className="starter-text">
-              I'm a brazilian undergratuated software engineer student at UFBA (Federal University of Bahia). I have 2
-              years of experience in software development, and have great interest in software engineering, aeronautic
+            <h4>Computer engineer student 🇧🇷</h4>
+            <p className="starter-text">
+              I have 2 years of experience in software development. I mainly work with software engineering, aeronautic
               engineering, data science and fullstack web development.
-            </h4>
+            </p>
             <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
               <a href="https://github.com/GuilhermeDorea" target="_blank" className="social-link">
                 <GithubLogoIcon size={24} weight="bold" />
@@ -49,6 +50,10 @@ export function Home() {
               <a href="https://linkedin.com/in/guilhermedorea/" target="_blank" className="social-link">
                 <LinkedinLogoIcon size={24} weight="bold" />
                 <span>LinkedIn</span>
+              </a>
+              <a download={true} href={resume} style={{ cursor: 'pointer' }} target="_blank" className="social-link">
+                <DownloadIcon size={24} weight="bold" />
+                <span>Resume</span>
               </a>
               <a style={{ cursor: 'pointer' }} onClick={scrollToContact} target="_blank" className="social-link">
                 <EnvelopeIcon size={24} weight="bold" />

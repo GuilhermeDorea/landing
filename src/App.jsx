@@ -6,7 +6,7 @@ import { AboutMe } from './pages/AboutMe';
 import { BlogHome, BlogPost } from './pages/Blog';
 import { Home } from './pages/Home';
 import { ProjectsHome } from './pages/Projects';
-import './styles/App.css';
+import './styles/Home.css';
 import './styles/index.css';
 
 function App() {

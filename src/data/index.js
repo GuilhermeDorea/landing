@@ -7,7 +7,7 @@ export const blogPosts = [
     slug: 'world of bots',
     title: 'A world of bots',
     date: '05 Dec 2025',
-    description: 'How the internet is full of slop and invaders.',
+    description: 'How the internet is full of slop and attackers.',
     tags: ['Scraping', 'Cybersecurity', 'Network'],
     content: post2
   },

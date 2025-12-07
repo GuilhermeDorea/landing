@@ -29,6 +29,11 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-main);
 }
+p {
+  font-family: --font-body;
+  font-weight: 400;
+}
+
 a,
 h1,
 h2,

@@ -23,7 +23,7 @@
 .avatar {
   text-align: center;
   border-radius: 10%;
-  width: 350px;
+  width: 20rem;
 }
 
 .right-starter-decor {
@@ -45,7 +45,7 @@
 
   text-decoration: none;
   color: var(--text-main);
-  padding: 10px 20px;
+  padding: 1.5em 0.5em;
   transition: all 0.2s ease;
 }
 
@@ -66,8 +66,8 @@
   left: 50%;
   transform: translateX(-50%);
 
-  background-color: #506e8ac9;
-  color: white;
+  background-color: var(--glass-bg);
+  color: var(--text-main);
   padding: 5px 10px;
   border-radius: 0px;
 
@@ -98,14 +98,15 @@
   left: 50%;
   transform: translateX(-50%);
 
-  background-color: #506e8ac9;
-  color: white;
+  background-color: var(--glass-bg);
+  color: var(--text-main);
   padding: 5px 10px;
   border-radius: 0px;
 
   transition:
     opacity 0.3s,
     visibility 0.3s;
+  width: 10em;
 }
 
 .aviao:hover::after {

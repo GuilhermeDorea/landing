@@ -25,7 +25,7 @@
 .post-date {
   margin-top: 0.25em;
   font-size: 0.8em;
-  color: grey;
+  color: var(--primary);
   text-align: left;
 }
 .post-description {

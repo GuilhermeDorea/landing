@@ -125,9 +125,10 @@ export function AboutMe() {
             <AnimatedSection className="timeline-item" yOffset={100}>
               <span className="timeline-date">{item.date}</span>
               <div className="timeline-dot" />
-              <h3 className="timeline-role">
-                {item.role} - {item.company}
-              </h3>
+              <div className="time-linerolecompany">
+                <h3 className="timeline-company">{item.company} </h3>
+                <h3 className="timeline-role">{item.role}</h3>
+              </div>
               <p className="timeline-desc">{item.description}</p>
             </AnimatedSection>
           ))}

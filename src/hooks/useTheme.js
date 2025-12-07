@@ -5,8 +5,15 @@ import { useEffect, useState } from 'react';
 const THEME_KEY = 'guilherme-theme';
 
 export function useTheme() {
-  // Pega o tema salvo no localStorage ou assume 'dark'
-  const [theme, setTheme] = useState(() => localStorage.getItem(THEME_KEY) || 'dark');
+  let theme;
+  let setTheme;
+  if (localStorage.getItem(THEME_KEY)) {
+    [theme, setTheme] = useState(() => localStorage.getItem(THEME_KEY));
+  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    [theme, setTheme] = useState(() => 'light');
+  } else {
+    [theme, setTheme] = useState(() => 'dark');
+  }
 
   useEffect(() => {
     const root = window.document.body;

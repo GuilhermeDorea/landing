@@ -3,8 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import { Link, useParams } from 'react-router-dom';
 import { Tag } from '../components/Tags';
 import { blogPosts } from '../data';
-import '../styles/App.css';
 import '../styles/Blog.css';
+import '../styles/Home.css';
 
 export function BlogHome() {
   return (

@@ -14,7 +14,7 @@ export function Tag({ tags }) {
     <div className="tag-grid">
       {tags &&
         tags.map((tag, index) => (
-          <div key={index} className="tag" style={{ color: randomColorGenerator() }}>
+          <div key={index} className="tag-icon" style={{ color: randomColorGenerator() }}>
             {tag}
           </div>
         ))}

@@ -8,7 +8,7 @@
 }
 
 .about-me-card {
-  padding: 15px;
+  padding: 1em;
 }
 
 /* SKILLS */
@@ -63,21 +63,21 @@
 .timeline-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2em;
   position: relative;
-  padding-left: 20px;
+  padding-left: 1.25em;
 }
 
 /* A Linha Vertical */
 .timeline-container::before {
   content: '';
   position: absolute;
-  top: 10px;
+  top: 1em;
   bottom: 0;
-  left: 26px;
+  left: 1.6em;
   width: 2px;
-  background-color: #25aceb;
-  box-shadow: 0 0 5px rgb(54, 113, 238);
+  background-color: var(--primary);
+  box-shadow: 0 0 5px var(--primary);
 }
 
 /* O Item Individual */
@@ -95,37 +95,35 @@
   height: 14px;
   border-radius: 50%;
   z-index: 1; /* Garante que fique acima da linha */
-  background-color: #25aceb; /* Azul destaque */
-  box-shadow: 0 0 5px rgb(54, 113, 238); /* Leve brilho */
+  background-color: var(--primary); /* Azul destaque */
+  box-shadow: 0 0 5px var(--primary); /* Leve brilho */
 }
 
-/* Estilos de Texto */
 .timeline-date {
   font-size: 0.85rem;
-  color: #d3d3d3;
-  font-weight: 600;
-  margin-bottom: 4px;
-  display: block;
+  color: var(--primary);
+  font-weight: bold;
 }
 
+.time-linerolecompany {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -1rem;
+  margin-bottom: -0.75rem;
+}
 .timeline-role {
   font-size: 1.1rem;
-  font-weight: bold;
-  color: #829abb;
-  margin: 0;
+  margin-left: 0.5rem;
 }
 
 .timeline-company {
-  font-size: 0.95rem;
-  color: #2563eb;
-  font-weight: 500;
-  margin: 2px 0 8px 0;
+  color: var(--secondary);
+  font-size: 1.1rem;
 }
 
 .timeline-desc {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0;
+  margin-top: 0.25em;
 }
 
 /* === LOVE CARD === */
