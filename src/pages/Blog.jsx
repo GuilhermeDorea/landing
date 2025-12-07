@@ -34,7 +34,7 @@ export function BlogPost() {
   }
   return (
     <>
-      <div className="blog-home">
+      <div className="container">
         <h1>{post.title}</h1>
         <p className="post-date">{post.date}</p>
         <hr />

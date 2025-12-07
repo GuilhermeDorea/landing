@@ -107,3 +107,17 @@
 .aviao:hover {
   transform: translateY(-5px) translateX(5px);
 }
+
+@media (max-width: 768px) {
+  #root {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  .starter-card {
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+}

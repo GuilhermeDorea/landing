@@ -1,5 +1,4 @@
 .about-me-container {
-  width: 800px;
 }
 
 .about-me-card {
@@ -106,15 +105,11 @@
   align-items: center;
   margin-top: -1rem;
   margin-bottom: -0.75rem;
-}
-.timeline-role {
   font-size: 1.1rem;
-  margin-left: 0.5rem;
 }
 
 .timeline-company {
   color: var(--secondary);
-  font-size: 1.1rem;
 }
 
 .timeline-desc {
@@ -136,4 +131,24 @@
   object-fit: cover;
   height: 250px;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .about-me-container {
+    width: 800px;
+  }
+}
+@media (max-width: 768px) {
+  .about-me-container {
+    text-align: left;
+  }
+  .time-linerolecompany {
+    display: flex;
+    flex-direction: column;
+    margin: -1.5rem;
+  }
+  .timeline-role {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+  }
 }

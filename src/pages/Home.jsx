@@ -66,7 +66,7 @@ export function Home() {
           </div>
         </div>
 
-        <div className="card">
+        <div className="container">
           <h2 style={{ marginBottom: '3rem' }}>Projects</h2>
           <div className="projects-grid">
             <ProjectCard
@@ -86,7 +86,7 @@ export function Home() {
             </ProjectCard>
           </div>
         </div>
-        <div className="card" id="contact">
+        <div className="container contact-container" id="contact">
           <h2>Contact me</h2>
           <ContactForm />
         </div>
