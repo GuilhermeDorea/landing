@@ -4,18 +4,10 @@ import GuidoNews from '../assets/imgs/guidonews.png';
 import fotoPerfil from '../assets/imgs/guilhermedorea.png';
 import matricunatorImagem from '../assets/imgs/MatricunatorLogo.png';
 import { ContactForm } from '../components/ContactForm';
+import { ProjectCard } from '../pages/Projects';
 import '../styles/App.css';
 import '../styles/index.css';
 import '../styles/Projects.css';
-
-function ProjectCard({ children, link, projectPicture, newtag = '_blank' }) {
-  return (
-    <Link target={newtag} to={link} className="project-card">
-      <img className="project-pic" src={projectPicture} />
-      <div className="project-text">{children}</div>
-    </Link>
-  );
-}
 
 export function Home() {
   const scrollToContact = () => {
@@ -31,9 +23,9 @@ export function Home() {
           <div className="left-starter-decor">
             <h2>
               Hi, I'm{' '}
-              <a target="_blank" className="myname" href="/aboutme" data-tooltip="About me">
+              <Link className="myname" to="/aboutme" data-tooltip="About me">
                 Guilherme Dórea Almeida{' '}
-              </a>{' '}
+              </Link>{' '}
               <a
                 target="_blank"
                 className="aviao"
@@ -72,14 +64,18 @@ export function Home() {
         <div className="projects-home">
           <h1>Projects</h1>
           <div className="projects-grid">
-            <ProjectCard link="https://matricunator.app/" projectPicture={matricunatorImagem}>
+            <ProjectCard
+              link="https://matricunator.app/"
+              projectPicture={matricunatorImagem}
+              tags={['React', 'Django', 'Python']}
+            >
               <h3>Matricunator</h3>
               <p>
                 Tool to assist students in planning their academic trajectory, helping them choose the best courses to
                 take each semester based on their preferences and academic history.
               </p>
             </ProjectCard>
-            <ProjectCard link="/posts" projectPicture={GuidoNews} newtag={false}>
+            <ProjectCard link="/posts" projectPicture={GuidoNews} newtag={false} tags={['React', 'UI/UX']}>
               <h3>GuidoNews</h3>
               <p> A blog with news about technology and my personal projects</p>
             </ProjectCard>

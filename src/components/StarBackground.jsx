@@ -1,9 +1,12 @@
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import { useEffect, useState } from 'react';
+import { useTheme } from '../hooks/useTheme';
+import '../styles/index.css';
 
 export function StarBackground() {
   const [init, setInit] = useState(false);
+  const [theme] = useTheme();
 
   // Inicializa o motor gráfico uma única vez
   useEffect(() => {
@@ -14,11 +17,14 @@ export function StarBackground() {
     });
   }, []);
 
-  const options = {
-    background: {
-      color: { value: '#080c18ff' }
-    },
+  let particle_color = '#080c18ff';
 
+  if (theme == 'light') {
+    particle_color = '#080c18ff';
+    console.log('sexoasasao');
+  }
+
+  const options = {
     fpsLimit: 100,
     interactivity: {
       events: {
@@ -37,11 +43,9 @@ export function StarBackground() {
       }
     },
     particles: {
-      color: {
-        value: '#ffffff'
-      },
+      color: {},
       links: {
-        color: '#ffffff',
+        color: '#080c18ff',
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -54,7 +58,7 @@ export function StarBackground() {
           default: 'bounce'
         },
         random: false,
-        speed: 0.1, // Velocidade do movimento natural
+        speed: 0.2, // Velocidade do movimento natural
         straight: false
       },
       number: {

@@ -5,14 +5,6 @@
   text-align: center;
 }
 
-.home-container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .starter-card {
   text-align: left;
   display: grid;
@@ -34,25 +26,6 @@
   width: 350px;
 }
 
-.card-link {
-  padding: 0em 0em;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  margin-top: 2rem;
-  text-align: left;
-  color: inherit;
-  border: 1px solid #e1e1e169;
-  transition: transform 0.2s;
-  max-width: 50%;
-}
-
-.card-link:hover {
-  color: inherit;
-  text-shadow: none;
-  border-color: #2563eb;
-  transform: translateY(-5px);
-}
-
 .right-starter-decor {
   display: flex;
   justify-content: center;
@@ -66,29 +39,25 @@
 }
 
 .social-link {
-  /* O Segredo: Flexbox */
   display: inline-flex; /* Comporta-se como texto por fora, mas flexível por dentro */
   align-items: center; /* Centraliza verticalmente (ícone e texto na mesma altura) */
   gap: 10px; /* Espaço entre o ícone e o texto */
 
   text-decoration: none;
-  color: #fff;
+  color: var(--text-main);
   padding: 10px 20px;
-  border-radius: 8px;
-  border: 1px transparent;
-  font-weight: 600;
   transition: all 0.2s ease;
 }
 
 .social-link:hover {
   transform: translateY(-3px);
-  color: #2563eb;
-  text-shadow: 0 4px 12px rgba(37, 99, 235, 0.65);
+  color: var(--secondary);
+  text-shadow: 0 4px 12px var(--secondary);
 }
 
 .myname {
   display: inline-flex;
-  color: #80ffd9;
+  color: var(--primary);
 }
 .myname::after {
   content: attr(data-tooltip);
@@ -100,22 +69,20 @@
   background-color: #506e8ac9;
   color: white;
   padding: 5px 10px;
-  border-radius: 4px;
-  white-space: nowrap;
+  border-radius: 0px;
 
-  visibility: hidden;
-  opacity: 0;
   transition:
     opacity 0.3s,
     visibility 0.3s;
 }
+
 .myname:hover::after {
   visibility: visible;
   opacity: 1;
 }
 .myname:hover {
-  transform: translateY(-3px);
-  color: #80ffd9;
+  transform: translateY(-5px);
+  color: var(--primary);
   transition: all 0.2s ease;
 }
 
@@ -134,15 +101,13 @@
   background-color: #506e8ac9;
   color: white;
   padding: 5px 10px;
-  border-radius: 4px;
-  white-space: nowrap;
+  border-radius: 0px;
 
-  visibility: hidden;
-  opacity: 0;
   transition:
     opacity 0.3s,
     visibility 0.3s;
 }
+
 .aviao:hover::after {
   visibility: visible;
   opacity: 1;

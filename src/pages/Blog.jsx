@@ -1,6 +1,7 @@
 // src/pages/BlogHome.jsx
 import ReactMarkdown from 'react-markdown';
 import { Link, useParams } from 'react-router-dom';
+import { Tag } from '../components/Tags';
 import { blogPosts } from '../data';
 import '../styles/App.css';
 import '../styles/Blog.css';
@@ -15,11 +16,7 @@ export function BlogHome() {
             <div className="link-post">{post.title}</div>
             <p className="post-date">{post.date}</p>
             <p className="post-description">{post.description}</p>
-            <div className="tag-grid ">
-              {post.tags.map((tag) => (
-                <div className="tag">{tag}</div>
-              ))}
-            </div>
+            <Tag tags={post.tags}>post.tags</Tag>
             <hr />
           </Link>
         ))}
@@ -33,7 +30,7 @@ export function BlogPost() {
   const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
-    return <h2 style={{ paddingTop: 100, textAlign: 'center', color: 'white' }}>Post não encontrado :(</h2>;
+    return <h2 style={{ paddingTop: 100, textAlign: 'center', color: 'white' }}>Post não encontrado :</h2>;
   }
   return (
     <>

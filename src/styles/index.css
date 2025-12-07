@@ -1,37 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Science+Gothic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100..900&family=Oswald:wght@200..700&display=swap');
 :root {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   color-scheme: light dark;
   letter-spacing: 0.5px;
+  --font-heading: 'Oswald', sans-serif; /* Para títulos */
+  --font-body: 'Lato', sans-serif; /* Para corpo do texto */
 
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
+  --primary: #0e7ee6;
+  --primary-hover: #4194e241;
+  --secondary: #e6a843;
+  --bg-primary: #1c1b22; /* Azul Escuro Espacial */
+  --text-main: #f1f5f9; /* Branco Leve */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --background-tags: #585858;
+}
 
-  /* Cores de Texto */
-  --text-main: #c2c2c2; /* Branco quase puro (para títulos) */
-  --text-body: #a4b0c0; /* Cinza claro (para parágrafos, cansa menos a vista) */
-  --text-muted: #64748b; /* Cinza escuro (para datas, rodapé) */
-  --bg-dark: #0f172a; /* A cor do fundo do espaço */
-  --glass-bg: rgba(255, 255, 255, 0.1); /* O fundo de vidro dos cards */
-  --glass-border: rgba(255, 255, 255, 0.1); /* A borda dos cards */
+body.light-theme {
+  --bg-primary: #f8f8f8;
+  --text-main: #1f2937;
+  --glass-bg: rgba(31, 41, 55, 0.1);
+  --background-tags: #585858;
 }
-.background-effects {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Joga para trás do texto */
-  filter: blur(4px); /* Ajuste esse número: 2px (sutil) a 8px (nebulosa) */
-  transform: scale(1.1);
-}
+
 body {
-  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  background-color: var(--bg-primary);
   color: var(--text-main);
-  background-color: var(--bg-dark);
-  font-family: 'Oswald', sans-serif;
-  -webkit-font-smoothing: antialiased;
+}
+a,
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 a {
@@ -40,26 +43,44 @@ a {
 }
 
 a:hover {
-  color: var(--primary-hover);
+  color: var(--secondary);
 }
 
+.background-effects {
+  background-color: var(--bg-primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(4px);
+  transform: scale(1.1);
+}
+
+/* Cards containers and buttons */
+
+.home-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-family: inherit;
   cursor: pointer;
-  background-color: #28326e;
+  background-color: var(--secondary);
   border-radius: 10px;
-  text-shadow: 0 0 10px #ffffff;
   transition: all 0.2s ease;
 }
 
 button:hover {
-  transform: translateY(-5px);
-  text-shadow: 0 0 10px #ffffff;
-  box-shadow: 0 0 10px #28326e;
+  box-shadow: 0 0 5px var(--secondary);
 }
 
 .card {

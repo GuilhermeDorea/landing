@@ -1,23 +1,20 @@
-import {
-  ArticleIcon,
-  DownloadSimpleIcon,
-  FoldersIcon,
-  GithubLogoIcon,
-  HouseIcon,
-  LinkedinLogoIcon,
-  UserIcon
-} from '@phosphor-icons/react';
+import { ArticleIcon, DownloadSimpleIcon, FoldersIcon, HouseIcon, Moon, Sun, UserIcon } from '@phosphor-icons/react';
 import { NavLink } from 'react-router-dom';
-import fotoPerfil from '../assets/imgs/GD.svg';
 import resume from '../assets/pdfs/Resume_GuilhermeDoreaAlmeida.pdf';
+import { useTheme } from '../hooks/useTheme'; // Importe o hook
 import '../styles/Nav.css';
 
 export function Navbar() {
+  const [theme, toggleTheme] = useTheme();
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <img className="logo" src={fotoPerfil} />
-      </div>
+      <button
+        onClick={toggleTheme}
+        className="theme-toggle-button"
+        aria-label={`Alternar para modo ${theme === 'dark' ? 'claro' : 'escuro'}`}
+      >
+        {theme === 'dark' ? <Sun size={24} weight="fill" /> : <Moon size={24} weight="fill" />}
+      </button>
 
       <div className="navbar-links">
         <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>

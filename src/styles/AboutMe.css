@@ -8,26 +8,14 @@
 }
 
 .about-me-card {
-  backdrop-filter: blur(20px);
-  border-radius: 10px;
-  align-items: center;
   padding: 15px;
 }
+
+/* SKILLS */
 .skill-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 20px;
-}
-
-.skill-card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid #eee;
 }
 
 .skill-header {
@@ -46,19 +34,18 @@
 .level-dot {
   width: 12px;
   height: 12px;
-  background-color: #e5e7eb; /* Cinza claro */
+  background-color: var(--text-main); /* Cinza claro */
   border-radius: 50%; /* Faz virar círculo */
   transition: all 0.3s;
 }
 
 .level-dot.filled {
-  background-color: #25aceb; /* Azul destaque */
-  box-shadow: 0 0 5px rgb(54, 113, 238); /* Leve brilho */
+  background-color: var(--primary); /* Azul destaque */
+  box-shadow: 0 0 5px var(--primary); /* Leve brilho */
 }
 
 .level-text {
-  font-size: 0.85rem;
-  color: #9e9e9e;
+  font-size: 0.75rem;
   margin: 0;
 }
 
@@ -67,9 +54,8 @@
   flex-direction: column;
   gap: 15px;
   padding: 1em 2em;
-  border: 1px solid #e1e1e169;
+  border: 1px solid var(--glass-bg);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
 

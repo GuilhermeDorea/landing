@@ -1,0 +1,15 @@
+.tag-grid {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  margin-top: -10px;
+}
+.tag {
+  margin-top: auto;
+  width: auto;
+  font-size: 0.8em;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: var(--background-tags);
+  padding: 2px 5px;
+}
