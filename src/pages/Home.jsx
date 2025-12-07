@@ -19,10 +19,10 @@ export function Home() {
   };
   return (
     <>
-      <div className="home-container">
+      <div className="container">
         <div className="card starter-card">
           <div className="left-starter-decor">
-            <h2>
+            <h2 style={{ margin: '0px 0px 0em 0px' }}>
               Hi, I'm{' '}
               <Link className="myname" to="/aboutme" data-tooltip="About me">
                 Guilherme Dórea Almeida{' '}
@@ -36,7 +36,7 @@ export function Home() {
                 ✈️{' '}
               </a>
             </h2>
-            <h4>Computer engineer student 🇧🇷</h4>
+            <h4 style={{ margin: '0px 0px 0px 0px' }}>Computer engineer student 🇧🇷</h4>
             <p className="starter-text">
               I have 2 years of experience in software development. I mainly work with software engineering, aeronautic
               engineering, data science and fullstack web development.
@@ -66,8 +66,8 @@ export function Home() {
           </div>
         </div>
 
-        <div className="projects-home">
-          <h1>Projects</h1>
+        <div className="card">
+          <h2 style={{ marginBottom: '3rem' }}>Projects</h2>
           <div className="projects-grid">
             <ProjectCard
               link="https://matricunator.app/"

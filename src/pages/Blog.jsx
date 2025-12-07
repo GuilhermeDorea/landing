@@ -8,13 +8,13 @@ import '../styles/Home.css';
 
 export function BlogHome() {
   return (
-    <div className="blog-home">
+    <div className="container">
       <h1>Posts</h1>
       <div>
         {blogPosts.map((post) => (
           <Link key={post.id} className="project-card" to={`/posts/${post.slug}`}>
             <div className="link-post">{post.title}</div>
-            <p className="post-date">{post.date}</p>
+            <h4 className="post-date">{post.date}</h4>
             <p className="post-description">{post.description}</p>
             <Tag tags={post.tags}>post.tags</Tag>
             <hr />

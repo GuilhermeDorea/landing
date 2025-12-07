@@ -1,29 +1,21 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .starter-card {
+  width: 100%;
   text-align: left;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.starter-card-logo {
-  width: 200px;
-  height: auto;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+  grid-template-columns: 1.2fr 1.1fr;
 }
 
 .avatar {
   text-align: center;
   border-radius: 10%;
-  width: 20rem;
+  width: 17rem;
 }
 
 .right-starter-decor {
@@ -35,13 +27,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 20px;
 }
 
 .social-link {
   display: inline-flex; /* Comporta-se como texto por fora, mas flexível por dentro */
   align-items: center; /* Centraliza verticalmente (ícone e texto na mesma altura) */
-  gap: 10px; /* Espaço entre o ícone e o texto */
+  gap: 0.5rem; /* Espaço entre o ícone e o texto */
 
   text-decoration: none;
   color: var(--text-main);

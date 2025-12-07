@@ -20,7 +20,7 @@ export function ProjectCard({ children, link, projectPicture, tags }) {
 
 export function ProjectsHome() {
   return (
-    <div className="projects-home">
+    <div className="container">
       <h1>Projects</h1>
       <div className="projects-grid">
         <ProjectCard

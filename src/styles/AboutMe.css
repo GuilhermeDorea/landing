@@ -1,10 +1,5 @@
 .about-me-container {
-  text-align: left;
   width: 800px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
 
 .about-me-card {

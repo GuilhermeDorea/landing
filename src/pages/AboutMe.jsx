@@ -83,9 +83,9 @@ export function SkillCard({ skill, level, icon }) {
 
 export function AboutMe() {
   return (
-    <div className="about-me-container">
+    <div className="container about-me-container ">
       {/* === Sobre mim === */}
-      <AnimatedSection className="about-me-card card" yOffset={-50}>
+      <AnimatedSection className="about-me-card" yOffset={-50}>
         <h1>About me</h1>
         <p>
           I'm Guilherme Dórea Almeida. A computer engineering student at the 8° period (4 reamaining), living in
@@ -106,7 +106,7 @@ export function AboutMe() {
         </p>
       </AnimatedSection>
       {/* === Minhas habilidades === */}
-      <AnimatedSection className="card about-me-container">
+      <AnimatedSection>
         <h2>Main skills</h2>
         <div className="skill-cards-container">
           <SkillCard skill="Algorithms" level="Expert" icon={<CodeIcon size={32} weight="bold" />} />
