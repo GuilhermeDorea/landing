@@ -35,8 +35,8 @@ export function BlogPost() {
   return (
     <>
       <div className="container">
-        <h1>{post.title}</h1>
-        <p className="post-date">{post.date}</p>
+        <h1 style={{ marginBottom: '-1rem' }}>{post.title}</h1>
+        <h4 className="post-date">{post.date}</h4>
         <hr />
         <div className="markdown-content">
           <ReactMarkdown>{post.content}</ReactMarkdown>

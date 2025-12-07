@@ -1,5 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import '../styles/ContactForm.css';
+import '../styles/index.css';
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm('xvgeqpgv');
@@ -22,9 +23,11 @@ export function ContactForm() {
         <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
 
-      <button type="submit" disabled={state.submitting} className="MyButton">
-        {state.submitting ? 'Sending...' : 'Send'}
-      </button>
+      <div className="butao-div">
+        <button type="submit" disabled={state.submitting} style={{ width: '30%' }}>
+          {state.submitting ? 'Sending...' : 'Send'}
+        </button>
+      </div>
     </form>
   );
 }

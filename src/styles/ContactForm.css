@@ -1,5 +1,5 @@
 .contact-container {
-  width: 80%;
+  width: 100%;
 }
 
 .contact-form {
@@ -36,4 +36,8 @@
   font-weight: bold;
   padding: 20px;
   border-radius: 8px;
+}
+
+.butao-div {
+  text-align: center;
 }

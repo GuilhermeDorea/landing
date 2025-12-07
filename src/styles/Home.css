@@ -10,6 +10,7 @@
   text-align: left;
   display: grid;
   grid-template-columns: 1.2fr 1.1fr;
+  padding-left: 0;
 }
 
 .avatar {
@@ -20,7 +21,7 @@
 
 .right-starter-decor {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 .left-starter-decor {

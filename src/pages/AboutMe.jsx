@@ -85,7 +85,7 @@ export function AboutMe() {
   return (
     <div className="container about-me-container ">
       {/* === Sobre mim === */}
-      <AnimatedSection className="about-me-card" yOffset={-50}>
+      <AnimatedSection yOffset={-50}>
         <h1>About me</h1>
         <p>
           I'm Guilherme Dórea Almeida. A computer engineering student at the 8° period (4 reamaining), living in
@@ -118,7 +118,7 @@ export function AboutMe() {
         </div>
       </AnimatedSection>
       {/* === Card de experiencia === */}
-      <AnimatedSection className="about-me-card card" yOffset={0}>
+      <AnimatedSection className="container" yOffset={0}>
         <h2>Experience</h2>
         <div className="timeline-container">
           {experiences.map((item) => (
