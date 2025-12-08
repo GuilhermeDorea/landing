@@ -120,5 +120,13 @@
   .starter-card {
     grid-template-columns: 1fr;
     width: 80%;
+    margin: auto;
+  }
+  .container {
+    text-align: center;
+    justify-content: center;
+  }
+  .social-link {
+    margin: auto;
   }
 }
