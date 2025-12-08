@@ -19,7 +19,7 @@ export function Home() {
   };
   return (
     <>
-      <div className="container">
+      <div className="container container-home">
         <div className="starter-card">
           <div className="left-starter-decor">
             <h2 style={{ margin: '0px 0px 0em 0px' }}>
