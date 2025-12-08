@@ -45,7 +45,7 @@ export function StarBackground() {
     particles: {
       color: {},
       links: {
-        color: '#080c18ff',
+        color: '#1c1b22',
         distance: 150,
         enable: true,
         opacity: 0.5,
