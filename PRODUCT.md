@@ -41,7 +41,7 @@ Engenheiro de computação que constrói ferramentas que outras pessoas usam de 
 ## Evidence on Hand
 
 - Projetos: Matricunator (matricunator.app, React/Django/Python, algoritmo guloso para grade de horários); GuidoNews (blog, React); repositórios públicos do GitHub: Jurasolvo (coletor de processos e modelo de classificação JuraModel), Despeliza, JobHunter, Matricunator-back.
-- Experiência: IT Intern na Sunter Technology (2025, aplicação fullstack React + Django para logística e chatbot de IA); Avionics Summer Job na Embraer (2025, requisitos e testes de sistema de manutenção de aeronaves); líder de Estabilidade e Controle na Axé Fly UFBA (desde 2022); graduação em Engenharia de Computação, UFBA, 8º período.
+- Experiência: IT Intern na Sunter Technology (2025, aplicação fullstack React + Django para logística e chatbot de IA); Avionics Summer Job na Embraer (2025, requisitos e testes de sistema de manutenção de aeronaves); líder de Estabilidade e Controle na Axé Fly UFBA (desde 2022); graduação em Engenharia de Computação, UFBA, 10º período.
 - Ausente: capturas de tela de produto próprias, métricas de uso (número de usuários), depoimentos. Não inventar nenhum desses.
 
 ## Product Principles

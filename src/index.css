@@ -6,10 +6,6 @@
   --display: 'Unbounded', system-ui, sans-serif;
   --text: 'Archivo Narrow', system-ui, sans-serif;
 }
-/* ponytail: palettes on trial via ?p=; delete the losers (and the hook in main.jsx) once one is chosen */
-:root[data-p='laranja'] { --y: #ff5a1f; --m: #1b2bff; }
-:root[data-p='ceu'] { --y: #7cc8ff; --m: #e0240b; }
-:root[data-p='menta'] { --y: #19e39a; --m: #5b2bff; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--y); color: var(--k); font-family: var(--text); font-size: 18px; line-height: 1.35; font-weight: 500; overflow-x: hidden; }
