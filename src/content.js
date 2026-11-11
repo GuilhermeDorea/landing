@@ -1,7 +1,7 @@
 // All page copy, in both languages. Keys must match between `en` and `pt`.
 export const copy = {
   en: {
-    nav: { prod: 'In production', shop: 'Workshop', record: 'Record', contact: 'Contact' },
+    nav: { prod: 'In production', shop: 'Workshop', record: 'Record', me: 'Off the clock', contact: 'Contact' },
     motive: ['I like software best when someone ', 'depends on it', ". I'm looking for a team where that is the job."],
     stamp: ['Open', 'to work'],
     spec: {
@@ -20,6 +20,10 @@ export const copy = {
       matricunator: {
         tag: 'Live · matricunator.app ↗',
         text: 'UFBA students use it to build their semester. A greedy algorithm arranges the classes around their free time.'
+      },
+      jobhunter: {
+        tag: 'Beta · jobhunter.guilhermedorea.com ↗',
+        text: 'Collects software and data job openings, remembers the ones that closed to predict when a company hires again, and learns from every win and loss of your search.'
       },
       jurasolvo: {
         tag: 'In use at a law firm · private code',
@@ -99,6 +103,16 @@ export const copy = {
         ['2022–23', 'Embraer Design Excellence Trophy']
       ]
     },
+    me: {
+      title: 'Off the clock',
+      note: 'The person behind the commits',
+      alt: 'Guilherme and Mariana together',
+      paras: [
+        "I'm Guilherme, from Salvador, Bahia. Outside of class I study new technologies and build personal projects, mostly because they are fun.",
+        "When I'm not coding I'm with the people I love: my family, my friends and Mariana, my partner for {years} years now, and my main reason to keep going and be better.",
+        'I like helping others learn, so I tutor and mentor when I can. And I love to travel: new places widen my view and feed my creativity.'
+      ]
+    },
     end: {
       title: ['Put me', 'to work'],
       sub: 'Open to internships and junior roles',
@@ -114,7 +128,7 @@ export const copy = {
     }
   },
   pt: {
-    nav: { prod: 'Em produção', shop: 'Oficina', record: 'Histórico', contact: 'Contato' },
+    nav: { prod: 'Em produção', shop: 'Oficina', record: 'Histórico', me: 'Fora do código', contact: 'Contato' },
     motive: ['Gosto de software quando alguém ', 'depende dele', '. Procuro um time onde esse seja o trabalho.'],
     stamp: ['Aberto a', 'propostas'],
     spec: {
@@ -133,6 +147,10 @@ export const copy = {
       matricunator: {
         tag: 'No ar · matricunator.app ↗',
         text: 'Estudantes da UFBA usam para montar o semestre. Um algoritmo guloso organiza as aulas em torno do tempo livre.'
+      },
+      jobhunter: {
+        tag: 'Beta · jobhunter.guilhermedorea.com ↗',
+        text: 'Reúne vagas de software e dados, guarda as que fecharam para prever quando a empresa contrata de novo e aprende com cada acerto e erro da sua busca.'
       },
       jurasolvo: {
         tag: 'Em uso em um escritório de advocacia · código privado',
@@ -210,6 +228,16 @@ export const copy = {
         ['2022–24', '1º lugar geral, SAE Brasil Aerodesign'],
         ['2023', '1º lugar, relatório de Estabilidade e Controle, SAE Aerodesign East'],
         ['2022–23', 'Troféu Embraer de Excelência em Projeto']
+      ]
+    },
+    me: {
+      title: 'Fora do código',
+      note: 'A pessoa por trás dos commits',
+      alt: 'Guilherme e Mariana juntos',
+      paras: [
+        'Sou o Guilherme, de Salvador, Bahia. Fora da faculdade estudo tecnologias novas e faço projetos pessoais, principalmente porque é divertido.',
+        'Quando não estou programando, estou com quem amo: minha família, meus amigos e a Mariana, minha companheira há {years} anos e minha maior motivação para seguir em frente e ser melhor.',
+        'Gosto de ajudar os outros a aprender, então dou aula particular e mentoria quando posso. E amo viajar: lugares novos ampliam minha visão e alimentam minha criatividade.'
       ]
     },
     end: {

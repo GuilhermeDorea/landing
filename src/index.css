@@ -53,6 +53,12 @@ h1 { margin: 0; font-weight: 900; font-size: clamp(40px, 8.8vw, 134px); line-hei
 /* 01 in production */
 .prod { display: grid; grid-template-columns: 7fr 5fr; gap: 3px; background: var(--k); border: 3px solid var(--k); margin: 28px 0 56px; }
 .p { background: var(--w); padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; min-height: 340px; position: relative; overflow: hidden; }
+.p.w { grid-column: 1 / -1; order: 1; min-height: 0; }
+.me { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 36px; padding: 30px 0 28px; align-items: start; }
+.me div { display: grid; gap: 18px; }
+.me p { margin: 0; font-size: 21px; max-width: 30em; }
+.me figure { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: var(--k); border: 3px solid var(--k); }
+.me img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
 .p.m { background: var(--m); color: var(--w); }
 .p .n { position: absolute; right: 14px; bottom: -34px; font-family: var(--display); font-weight: 900; font-size: 210px; line-height: 1; letter-spacing: -.06em; opacity: .1; pointer-events: none; }
 .p header { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; }
@@ -116,7 +122,7 @@ a.p:hover { background: var(--k); color: var(--y); }
   .sheet { padding-left: 16px; padding-right: 16px; }
   .reg { left: 16px; }
   nav { align-items: flex-start; }
-  .hero, .prod, .shop, .end, .tunnel { grid-template-columns: 1fr; }
+  .hero, .prod, .shop, .end, .tunnel, .me { grid-template-columns: 1fr; }
   .label { margin-top: 84px; }
   .stamp { left: auto; bottom: auto; top: -96px; right: -4px; width: 104px; height: 104px; font-size: 11px; }
   .steps, .job, .wins { grid-template-columns: 1fr; }

@@ -1,6 +1,8 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect, useState } from 'react';
 import resume from './assets/pdfs/Resume_GuilhermeDoreaAlmeida.pdf';
+import mari1 from './assets/imgs/mari1.webp';
+import mari2 from './assets/imgs/mari2.webp';
 import { copy } from './content';
 import { FlowTunnel } from './FlowTunnel';
 
@@ -52,7 +54,9 @@ function ContactForm({ t }) {
 export default function App() {
   const [lang, setLang] = useState(initialLang);
   const t = copy[lang];
-  const year = new Date().getFullYear();
+  const now = new Date();
+  const year = now.getFullYear();
+  const together = year - 2018 - (now < new Date(year, 4, 5) ? 1 : 0); // since 2018-05-05
 
   useEffect(() => {
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
@@ -78,6 +82,9 @@ export default function App() {
             </li>
             <li>
               <a href="#record">{t.nav.record}</a>
+            </li>
+            <li>
+              <a href="#me">{t.nav.me}</a>
             </li>
             <li>
               <a href="#contact">{t.nav.contact}</a>
@@ -150,6 +157,25 @@ export default function App() {
                 <span>React</span>
                 <span>Django</span>
                 <span>Docker</span>
+              </footer>
+            </a>
+            <a className="p w" href="https://jobhunter.guilhermedorea.com/" target="_blank" rel="noreferrer">
+              <span className="n" aria-hidden="true">
+                03
+              </span>
+              <header>
+                <span className="u">{t.prod.jobhunter.tag}</span>
+                <svg viewBox="0 0 72 72" aria-hidden="true">
+                  <circle cx="30" cy="30" r="22" fill="none" stroke="currentColor" strokeWidth="6" />
+                  <path d="M46 46 68 68" stroke="currentColor" strokeWidth="8" />
+                </svg>
+              </header>
+              <h3 className="u">JobHunter</h3>
+              <p>{t.prod.jobhunter.text}</p>
+              <footer>
+                <span>Django</span>
+                <span>Next.js</span>
+                <span>Postgres</span>
               </footer>
             </a>
             <article className="p m">
@@ -225,6 +251,21 @@ export default function App() {
               </li>
             ))}
           </ul>
+        </div>
+
+        <Bar id="me" n="04" title={t.me.title} note={t.me.note} />
+        <div className="sheet">
+          <div className="me">
+            <div>
+              {t.me.paras.map((para) => (
+                <p key={para}>{para.replace('{years}', together)}</p>
+              ))}
+            </div>
+            <figure>
+              <img src={mari1} alt={t.me.alt} loading="lazy" />
+              <img src={mari2} alt="" loading="lazy" />
+            </figure>
+          </div>
         </div>
       </main>
       <div className="hazard" aria-hidden="true" />
