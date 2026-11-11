@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
-import './styles/index.css';
+import './index.css';
+
+// Palette trial: ?p=laranja | ceu | menta
+const palette = new URLSearchParams(location.search).get('p');
+if (palette) document.documentElement.dataset.p = palette;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
